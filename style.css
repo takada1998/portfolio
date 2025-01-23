@@ -60,9 +60,10 @@ h2{
 }
 .p-topImage__img{
     height: 650px;
-    margin: 50px 0px 0px 0px;
-    width: 100%;
+    margin: 70px 0px 0px 0px;
+    /*width: 100%;*/
     max-width: 100%;
+    padding: 0 40px 0;
 }
 .p-topImage__img img{
     height: calc(100% - 3px);
@@ -74,7 +75,10 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0px 170px 0px 170px;
+    padding: 0px 10%;
+}
+.p-topImage__title h1{
+    font-size: 5rem;
 }
 .p-topImage__title p{
     color: #555555;
@@ -100,20 +104,23 @@ h2{
 .p-work__title{
     display: flex;
     height: 100px;
-    justify-content:center;
+    justify-content: flex-start;
     width: 100%;
     max-width: 100%;
+    align-items: flex-end;
+}
+.p-work__title h2{
+    font-size: 5rem;
+    padding-left: 10%;
 }
 .p-work__title p{
     font-size: 12px;
     font-weight: 400;
     height: auto;
     letter-spacing: 0.15em;
-    line-height: 13;
     text-align: center;
     width: auto;
     max-width: 100%;
-    justify-content: center;
     margin-left: 50px;
 }
 
@@ -138,7 +145,7 @@ h2{
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
     max-width: 1050px;
-    margin: 160px auto 60px;
+    margin: 70px auto 60px;
 }
 .p-work__inner img{
     width: 100%;
