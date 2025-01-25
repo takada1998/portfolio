@@ -150,7 +150,25 @@ h2{
 .p-work__inner img{
     width: 100%;
 }
-
+.p-work__item{
+    height: auto;
+    margin: 23px 0px 0px 0px;
+    padding: 0px 0px 0px 10px;
+    width: 100%;
+    max-width: 100%;
+}
+.p-work__item p{
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    height: auto;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    padding: 0px 0px 6px 0px;
+    width: auto;
+    max-width: 100%;
+    justify-content: center;
+}
 .p-work__item__text{
     display: flex;
     align-items: center;
