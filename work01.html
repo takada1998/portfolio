@@ -10,16 +10,17 @@
     <meta property="og:title" content="Ayano Takada Portfolio">
     <meta property="og:description" content="Ayano Takada Portfolio 作成したポートフォリオサイトです。">
     <meta property="og:image" content="https://takada1998.github.io/portfolio/image/top.jpg">
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+    <script src="js/test.js"></script>
     <header class="l-header">
         <div class="p-header__inner">
             <a href="/">
                 <img src="image/logo.png" alt="ロゴ画像">
             </a>
-            <nav class="p-nav">
+            <nav class="p-nav" id="js-nav">
                 <ul>
                     <li>
                         <a href="index.html">Top</a>
@@ -32,6 +33,12 @@
                     </li>
                 </ul>
             </nav>
+            <!-- ハンバーガーメニューボタン -->
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
     <section class="work-section__wrap">
