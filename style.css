@@ -43,6 +43,12 @@ h2{ font-size: 3em; }
   padding: 0 40px;
 }
 
+@media (max-width: 768px){
+  .p-header__inner img{
+    max-width: 50%;
+  }
+}
+
 /* PCナビ */
 @media (min-width: 769px){
   .hamburger{ display:none; }
@@ -262,23 +268,25 @@ h2{ font-size: 3em; }
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px; height: 22px;
+  width: 25px; height: 12px;
   cursor: pointer;
   z-index: 1001;
 }
 .hamburger span{
   display: block;
-  height: 3px;
+  height: 1px;
   background: #333;
   border-radius: 2px;
   transition: all .3s ease;
 }
-.hamburger.active span:nth-child(1){ transform: rotate(45deg) translate(8px,5px); }
+.hamburger.active span:nth-child(1){ transform: rotate(45deg) translate(4px,2px); }
 .hamburger.active span:nth-child(2){ opacity: 0; }
-.hamburger.active span:nth-child(3){ transform: rotate(-45deg) translate(8px,-5px); }
+.hamburger.active span:nth-child(3){ transform: rotate(-45deg) translate(6px,-4px); }
 
 @media (max-width: 768px){
-  .hamburger{ display: flex; }
+  .hamburger{ 
+    display: flex;
+  }
 
   .p-nav{
     display: block;
@@ -314,4 +322,116 @@ h2{ font-size: 3em; }
   }
 
   body.no-scroll{ overflow: hidden; touch-action: none; }
+}
+
+
+.p-work__work__item__top {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.p-work__work__item__toptitle h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.p-work__work__item__toptitle a {
+  color: #555;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.p-work__work__item__topimage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --------------------
+コンテンツセクション
+-------------------- */
+.p-work__content {
+  background: #fff;
+  margin: 100px auto;
+  padding: 60px 30px;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.p-work__content__inner {
+  margin-bottom: 50px;
+}
+
+.p-work__content__inner__title h2 {
+  font-size: 18px;
+  border-left: 3px solid #000;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.p-work__content__inner__text p {
+  font-size: 15px;
+  color: #444;
+}
+
+.p-work__content__inner__text__text {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 6px 0;
+}
+
+/* --------------------
+PC/SP スクリーン画像
+-------------------- */
+.p-work__work__item__screen {
+  background: #f8f8f6;
+  padding: 80px 0;
+}
+
+.p-work__work__item__screen__inner {
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:32px;
+  max-width:1100px;   /* センター寄せ＆はみ出し防止 */
+  margin:0 auto;
+}
+
+
+/* 子要素の幅を明示 */
+.p-work__work__item__screen__inner .p-screen__pc{
+  flex: 1 1 65%;      /* PC画像は広め */
+  min-width: 520px;   /* 並び替えが崩れない下限（好みに調整） */
+}
+.p-work__work__item__screen__inner .p-screen__sp{
+  flex: 0 0 225px;    /* SPモックは固定幅気味に */
+}
+
+/* 画像は枠にフィット */
+.p-work__work__item__screen__inner img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* スマホでは素直に縦積み */
+@media (max-width: 900px){
+  .p-work__work__item__screen__inner{
+    flex-direction:column;
+    align-items:center;
+    gap:24px;
+  }
+  .p-work__work__item__screen__inner .p-screen__pc,
+  .p-work__work__item__screen__inner .p-screen__sp{
+    flex: 0 1 auto;
+    min-width: 0;
+    width: min(100%, 640px);
+  }
 }
